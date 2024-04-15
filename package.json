@@ -9,15 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.0.28",
     "json-server": "^1.0.0-alpha.23",
+    "lucide-react": "^0.368.0",
     "next": "14.2.1",
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
     "shadcn-ui": "^0.8.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7",
     "yup": "^1.4.0"
   },
   "devDependencies": {
