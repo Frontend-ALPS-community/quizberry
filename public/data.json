@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "JavaScript"
+    },
+    {
+      "id": 2,
+      "name": "TypeScript"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "number": 1,
+      "question": "What is JavaScript?",
+      "options": ["A programming language", "A markup language", "A styling language", "None of the above"],
+      "answer": 0
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "number": 2,
+      "question": "What does 'DOM' stand for?",
+      "options": ["Document Object Model", "Digital Object Model", "Direct Object Manipulation", "Data Object Manager"],
+      "answer": 0
+    },
+    {
+      "id": 10,
+      "category_id": 2,
+      "number": 10,
+      "question": "What is the key feature of TypeScript?",
+      "options": ["Static typing", "Dynamic typing", "Functional programming", "Object-oriented programming"],
+      "answer": 0
+    }
+  ]
+}
