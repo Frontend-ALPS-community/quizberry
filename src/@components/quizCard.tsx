@@ -1,20 +1,28 @@
 import { Card, CardContent, CardDescription, CardFooter } from '@/components/ui/card'
 import Image from 'next/image'
+import Link from 'next/link'
 
-const QuizCard = () => {
-  const quizType = 'OX 퀴즈'
+interface Props {
+  category: string
+  quizNum: number
+  quizType: 'OX 퀴즈' | '주관식'
+}
+
+const QuizCard: React.FC<Props> = ({ category, quizNum, quizType }) => {
   return (
-    <Card className="rounded-xl bg-gray-300 text-white ">
-      <CardContent className="h-[85px] mt-[30px]">
-        <Image className="mx-auto" width={85} height={85} src={'/assets/logos/jsLogo.png'} alt="로고" />
-      </CardContent>
-      <CardDescription className="mb-sm pr-sm flex justify-end text-xLarge font-bold ">javascript</CardDescription>
+    <Link href={'/home/js'}>
+      <Card className="mb-md rounded-xl bg-gray-300 text-white ">
+        <CardContent className="h-[85px] mt-[30px]">
+          <Image className="mx-auto" width={85} height={85} src={`/assets/logos/${category}.png`} alt="로고" />
+        </CardContent>
+        <CardDescription className="mb-sm pr-sm flex justify-end text-xLarge font-bold ">{category}</CardDescription>
 
-      <CardFooter className="h-[50px] py-2 text-center flex justify-between  rounded-b-xl bg-zinc-500">
-        <div className="py-1 px-3 rounded-lg font-semibold bg-zinc-700">OX 퀴즈</div>
-        <div className=" font-bold text-medium">총 10문제</div>
-      </CardFooter>
-    </Card>
+        <CardFooter className="h-[50px] py-2 text-center flex justify-between  rounded-b-xl bg-zinc-500">
+          <div className="py-1 px-3 rounded-lg font-semibold bg-zinc-700">{quizType}</div>
+          <div className=" font-bold text-medium">총 {quizNum}문제</div>
+        </CardFooter>
+      </Card>
+    </Link>
   )
 }
 
