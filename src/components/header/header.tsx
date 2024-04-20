@@ -7,6 +7,7 @@ import React, { useCallback } from 'react'
 import { twMerge } from 'tailwind-merge'
 import CloseIcon from '../icons/close'
 import { ArrowLeftIcon } from '../icons/arrow-left'
+import { MenuIcon } from '../icons/menu'
 
 export interface IHeaderProps {
   title?: string
@@ -72,7 +73,9 @@ const HeaderPx = ({
         </div>
         {title && <div className={twMerge('font-medium text-center text-white', titleClassName)}>{title}</div>}
 
-        <div className="text-white">메뉴</div>
+        <div className="text-white">
+          <MenuIcon />
+        </div>
       </motion.div>
     </>
   )
