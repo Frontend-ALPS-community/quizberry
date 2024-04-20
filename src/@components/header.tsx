@@ -1,11 +1,11 @@
 'use client'
 import { useRouter } from 'next/navigation'
 
-interface Props {
+interface props {
   title: string
 }
 
-const Header: React.FC<Props> = ({ title }) => {
+const Header: React.FC<props> = ({ title }) => {
   const router = useRouter()
   return (
     <div className="mx-auto ">
