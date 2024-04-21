@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 
 interface Question {
@@ -42,14 +43,14 @@ const QuizList: React.FC = () => {
         ))}
       </div>
 
-      <h2>문제</h2>
-      <ul>
+      <div>문제</div>
+      <div>
         {questions.map((question) => (
-          <li key={question.id}>
-            <a href={`/question/${question.id}`}>Question {question.number}</a>
-          </li>
+          <div key={question.id}>
+            <Link href={`/question/${question.id}`}>Question {question.number}</Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
