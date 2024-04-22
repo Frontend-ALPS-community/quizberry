@@ -21,7 +21,7 @@ export interface IHeaderProps {
   downloadComponent?: React.ReactNode
 }
 
-const HeaderPx = ({
+const QuizHeader = ({
   title,
   prevUrl,
   handleClickBack,
@@ -81,4 +81,4 @@ const HeaderPx = ({
   )
 }
 
-export default HeaderPx
+export default QuizHeader

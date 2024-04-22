@@ -12,7 +12,7 @@ export default function CategoryLayout() {
 
   return (
     <div>
-      <div>:) 카테고리별로 뿌려지는걸 layout에서 설정해주기</div>
+      <div> 카테고리별로 뿌려지는걸 layout에서 설정해주기</div>
       <QuizList />
     </div>
   )
