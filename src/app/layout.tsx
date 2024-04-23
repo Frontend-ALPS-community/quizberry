@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
       </head>
-      <body className="font-display bg-gray-400">
+      <body className="font-display bg-gray-400" suppressHydrationWarning={true}>
         <Providers>{children}</Providers>
       </body>
     </html>
