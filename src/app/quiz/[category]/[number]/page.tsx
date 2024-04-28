@@ -9,8 +9,8 @@ const quizDetailPage = () => {
     <>
       <div>detail 문제 페이지</div>
       {/* <DefaultQuiz /> */}
-      {/* <OxQuiz /> */}
-      <TimerQuiz />
+      <OxQuiz />
+      {/* <TimerQuiz /> */}
     </>
   )
 }
