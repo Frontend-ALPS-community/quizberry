@@ -10,7 +10,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // 초록 직사각형 버튼
+        // primary color 버튼
         default:
           'bg-primaryColor text-[12px] text-primary-foreground rounded-[0px] hover:opacity-80 transition-all duration-300',
         // 흰색 직사각형 버튼
