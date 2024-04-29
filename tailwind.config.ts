@@ -1,13 +1,8 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
@@ -30,8 +25,11 @@ const config = {
         lg: '50px',
       },
       screens: {
-        sm: { max: '' },
+        sm: { max: '480px' },
         md: '750px',
+      },
+      width: {
+        content: '480px',
       },
       colors: {
         primaryColor: '#555CE4',
@@ -43,6 +41,21 @@ const config = {
           300: '#BBBBBB',
           400: '#666666',
           500: '#555555',
+        },
+        primaryBlue: {
+          default: '#2C5C84',
+          100: '#ECF1F7',
+          200: '#CFE4FE',
+          300: '#5E9BE4',
+          400: '#25ACF8',
+          500: '#3F6B8F',
+          700: '#021666',
+        },
+        skyblue: '#B3CDD6',
+        coralpink: {
+          100: '#FFB0B0',
+          200: '#F6B9B9',
+          300: '#FF8989',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -100,6 +113,6 @@ const config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config
