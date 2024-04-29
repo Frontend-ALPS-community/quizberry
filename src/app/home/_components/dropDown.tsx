@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'computer science'
+type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'CS'
 
 interface DropDownProps {
   handleCategorySelect: (category: category) => void
@@ -55,7 +55,7 @@ const DropDown: React.FC<DropDownProps> = ({ handleCategorySelect }) => {
             </button>
             <button
               className="block w-full  text-center  py-2 text-sm text-gray-700 hover:bg-gray-100"
-              onClick={() => handleCategorySelect('computer science')}
+              onClick={() => handleCategorySelect('CS')}
             >
               computer science
             </button>

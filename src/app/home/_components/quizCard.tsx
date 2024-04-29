@@ -11,7 +11,7 @@ interface Props {
 const QuizCard: React.FC<Props> = ({ category, quizNum, quizType }) => {
   return (
     <Link href={`/home/${category}`}>
-      <Card className="mb-md rounded-xl bg-primaryGray-300 text-white transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-primaryGray-500 duration-150  ">
+      <Card className="mb-md rounded-xl bg-primaryGray-300 text-white transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 hover:bg-primaryGray-500 duration-150  ">
         <CardContent className="h-[85px] mt-[30px]">
           <Image className="mx-auto" width={85} height={85} src={`/assets/logos/${category}.png`} alt="로고" />
         </CardContent>

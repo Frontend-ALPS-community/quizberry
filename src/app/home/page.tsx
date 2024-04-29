@@ -1,8 +1,8 @@
 'use client'
-import DropDown from '@/@components/dropDown'
-import QuizCard from '@/@components/quizCard'
+import DropDown from '@/app/home/_components/dropDown'
+import QuizCard from '@/app/home/_components/quizCard'
 import { useState } from 'react'
-type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'computer science'
+type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'CS'
 const page = () => {
   const [selectedCategory, setSelectedCategory] = useState<category | undefined>('전체')
 
@@ -11,7 +11,7 @@ const page = () => {
   }
 
   return (
-    <div className="w-[480px] min-w-[400px] px-md mx-auto border border-black">
+    <div className="w-[480px] min-w-[400px] bg-primaryColor px-md mx-auto border border-black">
       <div className="h-[307px] relative bg-slate-200  text-center pt-36">
         <div className="absolute top-0 left-0 w-[115px] h-[45px] pt-2 bg-pink-400">LOGO</div>배너 이미지
       </div>
@@ -25,8 +25,8 @@ const page = () => {
       {selectedCategory === 'nextJS' || selectedCategory === '전체' ? (
         <QuizCard category="nextJS" quizNum={20} quizType="OX 퀴즈" />
       ) : null}
-      {selectedCategory === 'computer science' || selectedCategory === '전체' ? (
-        <QuizCard category="computer science" quizNum={8} quizType="주관식" />
+      {selectedCategory === 'CS' || selectedCategory === '전체' ? (
+        <QuizCard category="CS" quizNum={8} quizType="주관식" />
       ) : null}
     </div>
   )
