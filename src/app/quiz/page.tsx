@@ -1,3 +1,3 @@
 export default function quiz() {
-  return <div className="bg-primaryColor p-md text-xLarge">Quiz!</div>;
+  return <div className="w-content flex flex-col m-auto h-screen bg-gray-100"></div>
 }
