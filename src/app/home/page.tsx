@@ -1,52 +1,35 @@
-import DefaultHeader from '@/components/header/defaultHeader'
-import Link from 'next/link'
+'use client'
+import DropDown from '@/app/home/_components/dropDown'
+import QuizCard from '@/app/home/_components/quizCard'
+import { useState } from 'react'
+type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'CS'
+const page = () => {
+  const [selectedCategory, setSelectedCategory] = useState<category | undefined>('전체')
 
-export default function HomePage() {
-  //임시
-  const category = [
-    {
-      id: 1,
-      category_id: 'Next.JS',
-    },
-    {
-      id: 2,
-      category_id: 'React',
-    },
-    {
-      id: 3,
-      category_id: 'JavaScript',
-    },
-    {
-      id: 4,
-      category_id: 'TypeScript',
-    },
-    {
-      id: 5,
-      category_id: 'Library',
-    },
-    {
-      id: 6,
-      category_id: 'CS',
-    },
-    {
-      id: 7,
-      category_id: 'ETC',
-    },
-  ]
+  const handleCategorySelect = (category: category) => {
+    setSelectedCategory(category)
+  }
 
   return (
-    <div className="w-full flex h-full text-center flex-col">
-      <DefaultHeader />
-      <div className="w-full h-[300px] bg-gray-100"></div>
-      <div className="mt-8">
-        {category.map((oneCategory) => (
-          <Link href={`/quiz/${oneCategory.category_id}`}>
-            <div className="flex flex-col justify-center bg-gray-200 w-full h-10 border mb-4">
-              {oneCategory.category_id}
-            </div>
-          </Link>
-        ))}
+    <div className="w-[480px] min-w-[400px] bg-primaryColor px-md mx-auto border border-black">
+      <div className="h-[307px] relative bg-slate-200  text-center pt-36">
+        <div className="absolute top-0 left-0 w-[115px] h-[45px] pt-2 bg-pink-400">LOGO</div>배너 이미지
       </div>
+      <DropDown handleCategorySelect={handleCategorySelect} />
+      {selectedCategory === 'javascript' || selectedCategory === '전체' ? (
+        <QuizCard category="javascript" quizNum={10} quizType="OX 퀴즈" />
+      ) : null}
+      {selectedCategory === 'typescript' || selectedCategory === '전체' ? (
+        <QuizCard category="typescript" quizNum={11} quizType="OX 퀴즈" />
+      ) : null}
+      {selectedCategory === 'nextJS' || selectedCategory === '전체' ? (
+        <QuizCard category="nextJS" quizNum={20} quizType="OX 퀴즈" />
+      ) : null}
+      {selectedCategory === 'CS' || selectedCategory === '전체' ? (
+        <QuizCard category="CS" quizNum={8} quizType="주관식" />
+      ) : null}
     </div>
   )
 }
+
+export default page
