@@ -10,8 +10,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const titleString = params.category
 
   return (
-    <div className="w-content bg-white m-auto flex flex-col">
-      <QuizHeader prevUrl="/" rightType="component" title={String(titleString)} />
+    <div className="w-content h-screen bg-white m-auto flex flex-col">
+      <QuizHeader prevUrl={`/quiz/${titleString}`} rightType="component" title={String(titleString)} />
       {children}
     </div>
   )

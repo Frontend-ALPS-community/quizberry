@@ -2,37 +2,53 @@
   "categories": [
     {
       "id": 1,
-      "name": "JavaScript"
+      "name": "Next.JS"
     },
     {
       "id": 2,
+      "name": "React"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript"
+    },
+    {
+      "id": 4,
       "name": "TypeScript"
+    },
+    {
+      "id": 5,
+      "name": "CS"
+    },
+    {
+      "id": 6,
+      "name": "ETC"
     }
   ],
   "questions": [
     {
       "id": 1,
       "category_id": 1,
-      "number": 1,
+      "index": 1,
       "question": "자바스크립트에 대해 설명하세요",
-      "options": ["A programming language", "A markup language", "A styling language", "None of the above"],
-      "answer": 0
+      "answer": "",
+      "explanations": "자바스크립트는..."
     },
     {
       "id": 2,
       "category_id": 1,
-      "number": 2,
+      "index": 2,
       "question": "'DOM'과 '가상DOM'에 대해 설명하세요",
-      "options": ["Document Object Model", "Digital Object Model", "Direct Object Manipulation", "Data Object Manager"],
-      "answer": 0
+      "answer": "",
+      "explanations": "DOM과 가상DOM은..."
     },
     {
       "id": 3,
       "category_id": 2,
-      "number": 10,
+      "index": 10,
       "question": "타입스크립트에 대해 설명하세요",
-      "options": ["Static typing", "Dynamic typing", "Functional programming", "Object-oriented programming"],
-      "answer": 0
+      "answer": "",
+      "explanations": "타입스크립트는..."
     }
   ]
 }

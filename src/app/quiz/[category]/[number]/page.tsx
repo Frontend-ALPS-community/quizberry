@@ -6,12 +6,11 @@ import TimerQuiz from '../../_components/timerQuiz/timerQuiz'
 
 const quizDetailPage = () => {
   return (
-    <>
-      <div>detail 문제 페이지</div>
+    <div className="">
       {/* <DefaultQuiz />
-      <OxQuiz /> */}
+          <OxQuiz /> */}
       <TimerQuiz />
-    </>
+    </div>
   )
 }
 
