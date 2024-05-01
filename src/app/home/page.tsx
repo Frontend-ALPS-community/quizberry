@@ -1,6 +1,7 @@
 'use client'
 import DropDown from '@/app/home/_components/dropDown'
 import QuizCard from '@/app/home/_components/quizCard'
+import DefaultHeader from '@/components/header/defaultHeader'
 import { useState } from 'react'
 type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'CS'
 const page = () => {
@@ -11,10 +12,9 @@ const page = () => {
   }
 
   return (
-    <div className="w-[480px] min-w-[400px] bg-primaryColor px-md mx-auto border border-black">
-      <div className="h-[307px] relative bg-slate-200  text-center pt-36">
-        <div className="absolute top-0 left-0 w-[115px] h-[45px] pt-2 bg-pink-400">LOGO</div>배너 이미지
-      </div>
+    <div className="w-[480px] min-w-[400px] bg-white px-md mx-auto border border-gray-300">
+      <DefaultHeader />
+      <div className="w-full bg-green-100 h-[300px]">메인 이미지</div>
       <DropDown handleCategorySelect={handleCategorySelect} />
       {selectedCategory === 'javascript' || selectedCategory === '전체' ? (
         <QuizCard category="javascript" quizNum={10} quizType="OX 퀴즈" />
