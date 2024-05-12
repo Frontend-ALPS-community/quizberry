@@ -32,8 +32,8 @@ export const DropRadio: React.FC<DropDownProps> = ({ handleCategorySelect }) => 
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
           <DropdownMenuRadioItem value="전체">
             <Button
-              variant="nonrounded"
-              className=" text-sm text-gray-700 "
+              variant="lightblue"
+              className=" text-sm text-gray-700 w-full"
               onClick={() => handleCategorySelect('전체')}
             >
               전체
@@ -41,8 +41,8 @@ export const DropRadio: React.FC<DropDownProps> = ({ handleCategorySelect }) => 
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="javascript">
             <Button
-              variant="nonrounded"
-              className=" text-sm text-gray-700 "
+              variant="lightblue"
+              className=" text-sm text-gray-700 w-full"
               onClick={() => handleCategorySelect('javascript')}
             >
               javascript
@@ -50,8 +50,8 @@ export const DropRadio: React.FC<DropDownProps> = ({ handleCategorySelect }) => 
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="typescript">
             <Button
-              variant="nonrounded"
-              className=" text-sm text-gray-700 "
+              variant="lightblue"
+              className=" text-sm text-gray-700 w-full"
               onClick={() => handleCategorySelect('typescript')}
             >
               typescript
@@ -59,15 +59,19 @@ export const DropRadio: React.FC<DropDownProps> = ({ handleCategorySelect }) => 
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="nextJS">
             <Button
-              variant="nonrounded"
-              className=" text-sm text-gray-700 "
+              variant="lightblue"
+              className=" text-sm text-gray-700 w-full"
               onClick={() => handleCategorySelect('nextJS')}
             >
               nextJS
             </Button>
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="CS">
-            <Button variant="nonrounded" className=" text-sm text-gray-700 " onClick={() => handleCategorySelect('CS')}>
+            <Button
+              variant="lightblue"
+              className=" text-sm text-gray-700 w-full"
+              onClick={() => handleCategorySelect('CS')}
+            >
               CS
             </Button>
           </DropdownMenuRadioItem>
