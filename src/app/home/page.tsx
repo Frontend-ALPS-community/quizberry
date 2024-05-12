@@ -1,7 +1,7 @@
 'use client'
-import DropDown from '@/app/home/_components/dropDown'
 import QuizCard from '@/app/home/_components/quizCard'
 import { useState } from 'react'
+import { DropRadio } from './_components/dropDown'
 type category = '전체' | 'javascript' | 'typescript' | 'nextJS' | 'CS'
 const page = () => {
   const [selectedCategory, setSelectedCategory] = useState<category | undefined>('전체')
@@ -15,7 +15,7 @@ const page = () => {
       <div className="h-[307px] relative bg-slate-200  text-center pt-36">
         <div className="absolute top-0 left-0 w-[115px] h-[45px] pt-2 bg-pink-400">LOGO</div>배너 이미지
       </div>
-      <DropDown handleCategorySelect={handleCategorySelect} />
+      <DropRadio handleCategorySelect={handleCategorySelect} />
       {selectedCategory === 'javascript' || selectedCategory === '전체' ? (
         <QuizCard category="javascript" quizNum={10} quizType="OX 퀴즈" />
       ) : null}
