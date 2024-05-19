@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const params = useParams()
-  console.log(params.category)
 
   const titleString = params.category
 

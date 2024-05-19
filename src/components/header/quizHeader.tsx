@@ -59,7 +59,7 @@ const QuizHeader = ({
             variants={{
               whileTap: {
                 scale: 0.95,
-                backgroundColor: 'var(--gray-60)',
+                backgroundColor: '#828282',
                 transition: {
                   duration: 0.01,
                   bounce: 0,

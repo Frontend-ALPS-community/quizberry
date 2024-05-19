@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div className="w-[480px] min-w-[400px] bg-white px-md mx-auto border border-gray-300">
       <DefaultHeader />
-      <div className="w-full bg-green-100 h-[300px]">메인 이미지</div>
+      <div className="w-full bg-green-100 h-[300px ]">메인 이미지</div>
       <DropDown handleCategorySelect={handleCategorySelect} />
       {selectedCategory === 'javascript' || selectedCategory === '전체' ? (
         <QuizCard category="javascript" quizNum={10} quizType="OX 퀴즈" />
