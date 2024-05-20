@@ -7,10 +7,14 @@ import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
 
 const DefaultQuiz: React.FC = () => {
-  const [showAnswer, setShowAnswer] = useState(true)
+  const [showAnswer, setShowAnswer] = useState(false)
 
   const toggleAnswer = () => {
     setShowAnswer(!showAnswer)
+  }
+
+  const handleSubmit = () => {
+    setShowAnswer(true)
   }
 
   return (
@@ -21,7 +25,7 @@ const DefaultQuiz: React.FC = () => {
           <Label className="mr-2 text-gray-500" htmlFor="답변숨기기">
             답변숨기기
           </Label>
-          <Switch id="답변숨기기" onChange={toggleAnswer} />
+          <Switch id="답변숨기기" onClick={toggleAnswer} />
         </div>
       </div>
       <div className="mb-2">
@@ -48,7 +52,7 @@ const DefaultQuiz: React.FC = () => {
         />
       </div>
       <div className="flex justify-center mt-5">
-        <Button className="">제출</Button>
+        <Button onClick={handleSubmit}>제출</Button>
       </div>
     </div>
   )
