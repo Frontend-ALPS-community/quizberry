@@ -9,6 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Select, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { useState } from 'react'
+import OxAnswer from './_components/oxanswer'
 import QuestionCategory from './_components/questionCategory'
 import QuizCategory from './_components/quizCategory'
 
@@ -22,9 +23,11 @@ const FormSchema = z.object({
   question: z.string({
     required_error: 'Please select an email to display.',
   }),
-  answer: z.string({
-    required_error: 'Please select an email to display.',
-  }),
+  answer: z
+    .enum(['all', 'mentions', 'none'], {
+      required_error: 'You need to select a notification type.',
+    })
+    .or(z.string({ required_error: 'You need to select a notification type.' })),
 })
 
 export default function SelectForm() {
@@ -34,6 +37,18 @@ export default function SelectForm() {
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    // const type = data.questionC
+    // const category = data.category
+    // const question = data.question
+    // const answer = data.answer
+    // const options = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ type, category, question, answer }),
+    // }
+    // fetch(`http://localhost:9999/quiz`, options)
     console.log(data)
   }
   const handle = (data: any) => {
@@ -50,7 +65,6 @@ export default function SelectForm() {
             <FormItem onChange={handle}>
               <div className="flex justify-between items-center mx-sm my-md">
                 <FormLabel className="">1. 질문유형 선택</FormLabel>
-                {category === 'OX' ? <div>OX</div> : <div>OX아님</div>}
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl className="w-[200px]">
                     <SelectTrigger>
@@ -107,7 +121,11 @@ export default function SelectForm() {
               <div className="justify-between items-center mx-sm my-md">
                 <FormLabel className="">4. 정답을 입력해주세요</FormLabel>
                 <FormControl className="my-md">
-                  <Textarea placeholder="정답 내용 입력" className="resize-none" {...field} />
+                  {category === 'OX' ? (
+                    <OxAnswer field={field} />
+                  ) : (
+                    <Textarea placeholder="정답 내용 입력" className="resize-none" {...field} />
+                  )}
                 </FormControl>
               </div>
               <FormMessage />
